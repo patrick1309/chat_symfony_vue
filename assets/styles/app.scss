@@ -1,0 +1,189 @@
+@import "~bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/** LOGIN PAGE **/
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+
+form {
+	.form-group {
+		margin-bottom: 1rem;
+	}
+}
+
+
+/** CHANNEL CONTAINER **/
+#chat_container {
+	height: 100vh;
+	width: 100vw;
+}
+
+#channels_container {
+	background:black;
+	color: white;
+	font-weight: 300;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px 20px;
+
+	#list_channels {
+		list-style: none;
+		height: 100%;
+		overflow: hidden;
+
+		.channels {
+			cursor: pointer;
+			display: flex;
+			align-items: space-between;
+
+			&.active {
+				color:red;
+			}
+			
+
+			.channel-icon {
+				margin-right: 10px;
+				font-size:1.6rem;
+			}
+
+			div.meta {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	#bottom-bar {
+		align-self: baseline;
+
+	}
+}
+
+#chatroom {
+	font-weight: 300;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px 20px;
+
+	#chatroom-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	
+		#logout-icon {
+			cursor: pointer;
+		}
+	}
+
+	#message-container {
+		flex:1;
+
+		.messages {
+			display: flex;
+			margin-bottom: 5px;
+
+			.message-author {
+				clear: both;
+			}
+
+			.message-content {
+				background: lightblue;
+				padding: 5px;
+				border-radius: 5px;
+			}
+
+			&.right {
+				justify-content: flex-end;
+
+				.message-content {
+					background: blue;
+					color: white;	
+				}
+			}
+			
+			
+		}
+	}
+
+	#chatroom-footer {
+
+	}
+	
+}
